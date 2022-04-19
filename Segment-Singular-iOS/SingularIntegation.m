@@ -37,12 +37,19 @@ static bool isInitialized = NO;
     
     NSString* apiKey = [settings objectForKey:@"apiKey"];
     NSString* secret = [settings objectForKey:@"secret"];
+    NSString* clipboardAttribution = [settings objectForKey:@"clipboardAttribution"];
+
+
     
     if (!apiKey || !secret){
         return nil;
     }
     
     SingularConfig* config = [[SingularConfig alloc] initWithApiKey:apiKey andSecret:secret];
+
+    if([clipboardAttribution isEqualToString:@"true"]){
+        config.clipboardAttribution = true
+    }
     
     config.skAdNetworkEnabled = isSKANEnabled;
     config.manualSkanConversionManagement = isManualMode;
