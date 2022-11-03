@@ -8,16 +8,16 @@ let package = Package(
     products: [
         .library(
             name: "Segment-Singular",
-            targets: ["Segment-Singular"]
+            targets: ["segment-singular-ios"]
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/segmentio/analytics-ios", from: "4.1.6"),
-        .package(url: "https://github.com/singular-labs/Singular-iOS-SDK", from: "10.4.1")
+        .package(url: "https://github.com/segmentio/analytics-ios"),
+        .package(url: "https://github.com/singular-labs/Singular-iOS-SDK")
     ],
     targets: [
         .target(
-          name: "Segment-Singular",
+          name: "segment-singular-ios",
           dependencies: ["Analytics", "Singular-SDK"],
           path: "Segment-Singular-iOS/"
         )
