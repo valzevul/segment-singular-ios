@@ -3,7 +3,7 @@ import PackageDescription
 let package = Package(
     name: "Segment-Singular",
     platforms: [
-        .iOS(.v14),
+      .iOS(.v13),
     ],
     products: [
         .library(
@@ -16,8 +16,10 @@ let package = Package(
         .package(url: "https://github.com/singular-labs/Singular-iOS-SDK", from: "10.4.1")
     ],
     targets: [
-        .target(name: "Segment-Singular",
-                dependencies: ["Analytics", "Singular-SDK"]
-                path: "Segment-Singular-iOS/"),
+        .target(
+          name: "Segment-Singular",
+          dependencies: ["Analytics", "Singular-SDK"],
+          path: "Segment-Singular-iOS/"
+        )
     ]
 )
