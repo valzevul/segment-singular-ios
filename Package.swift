@@ -18,7 +18,7 @@ let package = Package(
     targets: [
         .target(
           name: "segment-singular-ios",
-          dependencies: ["Analytics", "Singular-SDK"],
+          dependencies: ["Segment", "Singular"],
           path: "Segment-Singular-iOS/"
         )
     ]
