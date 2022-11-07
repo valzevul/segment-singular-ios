@@ -1,28 +1,19 @@
 // swift-tools-version:5.1
 import PackageDescription
 let package = Package(
-    name: "Segment-Singular",
-    platforms: [
-      .iOS(.v13),
-    ],
-    products: [
-        .library(
-            name: "Segment-Singular",
-            targets: ["segment-singular-ios"]
-        )
-    ],
+    name: "SegmentSingular",
+    platforms: [.iOS(.v13)],
+    products: [.library(name: "SegmentSingular", targets: ["SegmentSingular"])],
     dependencies: [
         .package(url: "https://github.com/segmentio/analytics-ios", from: "4.1.6"),
         .package(url: "https://github.com/singular-labs/Singular-iOS-SDK", from: "10.4.1")
     ],
     targets: [
         .target(
-          name: "segment-singular-ios",
-          dependencies: ["Segment", "Singular"],
+          name: "SegmentSingular",
+          dependencies: ["Segment", .product(name: "Singular", package: "Singular")],
           path: "Segment-Singular-iOS/",
-          cSettings: [
-            .headerSearchPath("Segment-Singular-iOS")
-          ]
+          publicHeadersPath: ""
         )
     ]
 )
