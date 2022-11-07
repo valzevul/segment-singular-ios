@@ -19,7 +19,10 @@ let package = Package(
         .target(
           name: "segment-singular-ios",
           dependencies: ["Segment", "Singular"],
-          path: "Segment-Singular-iOS/"
+          path: "Segment-Singular-iOS/",
+          cSettings: [
+            .headerSearchPath("Segment-Singular-iOS")
+          ]
         )
     ]
 )

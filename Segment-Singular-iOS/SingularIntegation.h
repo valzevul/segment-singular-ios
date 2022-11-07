@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#if SWIFT_PACKAGE
+#import <SEGIntegration.h>
+#else
 #import <Segment/SEGIntegration.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
