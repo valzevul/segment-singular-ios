@@ -7,13 +7,8 @@
 //
 
 #import "SingularIntegation.h"
-#if SWIFT_PACKAGE
 #import <SEGAnalyticsConfiguration.h>
 #import <SEGAnalytics.h>
-#else
-#import <Segment/SEGAnalyticsConfiguration.h>
-#import <Segment/SEGAnalytics.h>
-#endif
 #import "Singular/Singular.h"
 #import "Singular/SingularConfig.h"
 
