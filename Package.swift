@@ -2,7 +2,7 @@
 import PackageDescription
 let package = Package(
     name: "SegmentSingular",
-    platforms: [.iOS(.v16)],
+    platforms: [.iOS(.v13)],
     products: [.library(name: "SegmentSingular", targets: ["SegmentSingular"])],
     dependencies: [
         .package(url: "https://github.com/segmentio/analytics-ios", from: "4.1.8"),
